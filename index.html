@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp Overlay</title>
+    <style>
+        body {
+            background-image: url(./Ocean.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #popup {
+            width: 40%;
+            height: 60%;
+            background-color: aquamarine;
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+
+        fieldset {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        input {
+            margin: 10px;
+            width: 70%;
+            height: 35%;
+            font-size: 24px;
+        }
+
+        button {
+            margin: 10px;
+            width: 72%;
+            height: 35%;
+            background-color: aqua;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup">
+        <h1>
+            Sign Up to get 50% off of your first image!
+        </h1>
+        <h2>We have thousands of background images for you!</h2>
+        <form>
+            <fieldset>
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Enter Your Email">
+                <button onclick="myFunction()" type="button">Get My 50% Off!</button>
+            </fieldset>
+          
+        </form>
+        <footer>I confirm that I have read and agree to the privacy policy</footer>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("popup");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+</body>
+
+</html>
